@@ -1,0 +1,141 @@
+body {
+    background-color: rgb(230, 230, 230);
+    color: rgb(230, 230, 230);
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(39, 40, 45);
+    padding: 5px;
+    text-align: center;
+}
+
+#iconIMG {
+    margin: 5px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.headtxt {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.headfromhome {
+    margin: 10px;
+}
+
+#bodybody {
+    display: flex;
+}
+
+#left_menu {
+    display: flex;
+    margin-top: 70px;
+    position: fixed;
+    height: 100vh;
+    width: auto;
+    padding: 10px;
+    border-top: 1px solid rgb(140, 140, 140);
+    background-color: rgb(48, 50, 59);
+    text-align: left;
+    text-align: center;
+}
+
+
+.pbutton {
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+
+}
+
+.PDIV {
+
+    margin: 5px;
+}
+
+#center_body {}
+
+#imgimg {
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+#slider {
+    width: 300px;
+}
+
+.drag-and-drop {
+    cursor: move;
+    position: absolute;
+    z-index: 1000;
+}
+
+.drag {
+    z-index: 1001;
+}
+
+#drag-and-drop {
+    width: 30px;
+    height: 30px;
+}
+
+.piecescc {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.blueballsCSS {
+    color: rgb(72, 72, 255);
+}
+
+.redballsCSS {
+    color: rgb(255, 72, 72);
+}
+
+.pieceTabCss {
+    margin: 5px;
+}
+
+.jougi {
+    width: 400px;
+    height: auto;
+}
+
+img {
+    user-drag: none;
+    /* ドラッグ禁止 */
+    user-select: none;
+    /* 選択禁止 */
+    -webkit-user-drag: none;
+    /* Webkitブラウザ（ChromeやSafari）向け */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    /* Firefox向け */
+    -ms-user-select: none;
+    /* IE向け */
+    pointer-events: none;
+    /* 右クリックや長押し禁止 */
+}
+
+p {
+    user-select: none
+        /* 選択を禁止する */
+}
+
+strong {
+    user-select: none
+        /* 選択を禁止する */
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手相見れそう</title>
+    <link rel="stylesheet" href="strategy_board.css">
+</head>
+
+<body>
+    <header>
+
+        <img id="iconIMG" src="StrategyBoard.png" alt="icon">
+        <p class="headtxt">手相見れそう</p>
+
+        <form class="headfromhome">
+            <input type="file" name="test" onchange="previewFile(this);">
+            <input id="slider" type="range" name="size" min="100" max="5000" step="10">
+            <div id="txt">1000</div>
+        </form>
+
+        <div class="drag-and-drop" id="p1">
+            <img class="piecescc" src="piece – 1.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p2">
+            <img class="piecescc" src="piece – 2.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p3">
+            <img class="piecescc" src="piece – 3.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p4">
+            <img class="piecescc" src="piece – 4.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p5">
+            <img class="piecescc" src="piece – 5.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p6">
+            <img class="piecescc" src="piece – 6.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p7">
+            <img class="piecescc" src="piece – 7.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p8">
+            <img class="piecescc" src="piece – 8.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p9">
+            <img class="piecescc" src="piece – 9.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p10">
+            <img class="piecescc" src="piece – 10.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p11">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p12">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p13">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p14">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p15">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p16">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p17">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p18">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p19">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p20">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p21">
+            <img class="piecescc" src="BallB.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p22">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p23">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p24">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p25">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p26">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p27">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p28">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p29">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p30">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p31">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p32">
+            <img class="piecescc" src="BallR.png" alt="">
+        </div>
+        <div class="drag-and-drop" id="p33">
+            <img class="jougi" src="jougi.png" alt="">
+        </div>
+    </header>
+
+    <div id="bodybody">
+        <div id="left_menu">
+            <input id="piece1" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece2" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece3" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece4" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece5" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece6" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece7" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece8" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece9" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece10" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece11" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece12" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece13" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece14" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece15" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece16" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece17" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece18" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece19" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece20" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece21" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece22" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece23" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece24" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece25" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece26" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece27" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece28" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece29" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece30" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece31" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece32" class="checkbox" type="checkbox" name="pieceCB">
+            <input id="piece33" class="checkbox" type="checkbox" name="pieceCB">
+
+            <div id="pieceTab" class="pieceTabCss">
+                <details>
+                    <summary><strong class="pinscss">pin</strong></summary>
+                    <div class="PDIV">
+                        <label for="piece1">
+                            <img id="pieceBu1" class="pbutton" src="piece – 1.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece2">
+                            <img id="pieceBu2" class="pbutton" src="piece – 2.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece3">
+                            <img id="pieceBu3" class="pbutton" src="piece – 3.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece4">
+                            <img id="pieceBu4" class="pbutton" src="piece – 4.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece5">
+                            <img id="pieceBu5" class="pbutton" src="piece – 5.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece6">
+                            <img id="pieceBu6" class="pbutton" src="piece – 6.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece7">
+                            <img id="pieceBu7" class="pbutton" src="piece – 7.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece8">
+                            <img id="pieceBu8" class="pbutton" src="piece – 8.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece9">
+                            <img id="pieceBu9" class="pbutton" src="piece – 9.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece10">
+                            <img id="pieceBu10" class="pbutton" src="piece – 10.png" alt="piece">
+                        </label>
+                    </div>
+                </details>
+            </div>
+
+            <div id="BballTab" class="pieceTabCss">
+                <details>
+                    <summary><strong class="blueballsCSS">pin</strong></summary>
+                    <div class="PDIV">
+                        <label for="piece11">
+                            <img id="pieceBu11" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece12">
+                            <img id="pieceBu12" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece13">
+                            <img id="pieceBu13" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece14">
+                            <img id="pieceBu14" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece15">
+                            <img id="pieceBu15" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece16">
+                            <img id="pieceBu16" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece17">
+                            <img id="pieceBu17" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece18">
+                            <img id="pieceBu18" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece19">
+                            <img id="pieceBu19" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece20">
+                            <img id="pieceBu20" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece21">
+                            <img id="pieceBu21" class="pbutton" src="BallB.png" alt="piece">
+                        </label>
+                    </div>
+                </details>
+            </div>
+
+            <div id="RballTab" class="pieceTabCss">
+                <details>
+                    <summary><strong class="redballsCSS">pin</strong></summary>
+                    <div class="PDIV">
+                        <label for="piece22">
+                            <img id="pieceBu22" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece23">
+                            <img id="pieceBu23" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece24">
+                            <img id="pieceBu24" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece25">
+                            <img id="pieceBu25" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece26">
+                            <img id="pieceBu26" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece27">
+                            <img id="pieceBu27" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece28">
+                            <img id="pieceBu28" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece29">
+                            <img id="pieceBu29" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece30">
+                            <img id="pieceBu30" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece31">
+                            <img id="pieceBu31" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                    <div class="PDIV">
+                        <label for="piece32">
+                            <img id="pieceBu32" class="pbutton" src="BallR.png" alt="piece">
+                        </label>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+        <div id="center_body">
+
+            <div id="imgimg">
+                <img id="preview">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <script>
+                    function previewFile(hoge) {
+                        var fileData = new FileReader();
+                        fileData.onload = (function () {
+                            //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+                            //プレビュー表示している
+                            document.getElementById('preview').src = fileData.result;
+                        });
+                        fileData.readAsDataURL(hoge.files[0]);
+                    }
+                </script>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="strategy_board.js"></script>
+</body>
+
+</html>
